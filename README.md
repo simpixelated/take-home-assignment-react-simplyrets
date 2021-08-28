@@ -16,3 +16,7 @@ Sometimes there differences were only 1-3px, sometimes 20px+. I decided to pick 
 ## Accessibility Issues
 
 When running accessibility checks with axe dev tools, it does flag a "serious" issue with the lack of sufficient color contrast, but that's based on the design, so it would be another issue to bring up with the designer.
+
+### Dependencies
+
+- Added `jest-fetch-mock` to test the API fetching logic in PropertyListings
