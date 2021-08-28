@@ -53,19 +53,25 @@ const states = [
 
 const capitalizeEachWord = (string) => {
   if (!string) {
-    return ''
+    return '';
   }
   return string
     .toLowerCase()
     .split(' ')
     .map((string) => string.charAt(0).toUpperCase() + string.slice(1))
     .join(' ');
-}
+};
 const getStateAbbreviation = (state) =>
   states.find(([fullName]) => fullName === state)[1];
 
 export const getFormattedListDate = (listDate) =>
-  new Date(listDate).toLocaleString('en-US', { month: 'numeric', day: 'numeric', year: '2-digit' }).split(',')[0];
+  new Date(listDate)
+    .toLocaleString('en-US', {
+      month: 'numeric',
+      day: 'numeric',
+      year: '2-digit',
+    })
+    .split(',')[0];
 
 export const getFormattedListPrice = (listPrice) =>
   new Intl.NumberFormat('en-US', {
@@ -88,6 +94,6 @@ export const getFormattedAddress = ({
   return [
     street,
     capitalizeEachWord(city),
-    getStateAbbreviation(capitalizeEachWord(state))
+    getStateAbbreviation(capitalizeEachWord(state)),
   ].join(', ');
 };
