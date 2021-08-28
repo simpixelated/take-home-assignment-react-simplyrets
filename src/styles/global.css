@@ -11,3 +11,98 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+header {
+  background: #F4F4F4;
+  border-radius: 1px;
+  height: 103px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 38px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+header h1 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 40px;
+  color: #2D2D2D;
+  margin: 0 60px;
+}
+
+ul.listings {
+  padding: 0;
+  margin-left: 58px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 315px);
+  grid-gap: 37px 58px;
+}
+.listings li {
+  margin: 0;
+  list-style: none;
+}
+.listings .thumbnail {
+  position: relative;
+}
+.listings .thumbnail {
+  border-radius: 4px;
+  background-size: cover;
+  height: 280px;
+  width: 315px;
+  margin-bottom: 16px;
+}
+.listings .thumbnail .favorite {
+  position: absolute;
+  top: 13px;
+  right: 9px;
+  width: 40px;
+}
+
+.listings p {
+  color: #2D2D2D;
+  line-height: 32px;
+  margin: 0;
+}
+
+.listings .details {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 11px;
+}
+
+.listings .price {
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 24px;
+  margin-bottom: 5px;
+}
+
+.listings .address {
+  font-size: 15px;
+  margin-bottom: -6px;
+}
+
+.listings .date {
+  font-size: 14px;
+  color: #979797;
+}
+
+/* mobile styling */
+@media only screen and (max-width: 700px) {
+  header {
+    height: 63px;
+  }
+
+  header h1 {
+    font-size: 14px;
+    margin: 0 17px;
+  }
+
+  ul.listings {
+    padding: 0;
+    margin-left: 17px;
+  }
+
+}

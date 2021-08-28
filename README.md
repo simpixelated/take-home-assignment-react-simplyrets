@@ -6,4 +6,9 @@
 
 # Code and Design Decisions
 
-<!-- Please document your code & design decisions here. -->
+There were some minor differences in the Figma file that I decided not to make in my code. For example, there were different margins:
+- between listings
+- between the heart icon and the top/right edge of thumbnail
+- between listing container and left side of window
+
+Sometimes there differences were only 1-3px, sometimes 20px+. I decided to pick the amount that looked best for each situation and stay consistent. Normally I would ask the designer about these issues.
