@@ -1,11 +1,11 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('displays correct heading with role and level', () => {
   render(<App />);
   const heading = screen.getByRole(
     'heading',
-    /Side React Take-home Assignment/i,
+    { level: 1 },
   );
-  expect(heading).toBeInTheDocument();
+  expect(heading).toHaveTextContent('Property Listings');
 });

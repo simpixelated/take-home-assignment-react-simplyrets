@@ -51,22 +51,28 @@ const states = [
   ['Wyoming', 'WY'],
 ];
 
-const capitalizeEachWord = (string) =>
-  string
+const capitalizeEachWord = (string) => {
+  if (!string) {
+    return ''
+  }
+  return string
+    .toLowerCase()
     .split(' ')
     .map((string) => string.charAt(0).toUpperCase() + string.slice(1))
     .join(' ');
+}
 const getStateAbbreviation = (state) =>
   states.find(([fullName]) => fullName === state)[1];
 
 export const getFormattedListDate = (listDate) =>
-  new Date(listDate).toLocaleString('en-US').split(',')[0];
+  new Date(listDate).toLocaleString('en-US', { month: 'numeric', day: 'numeric', year: '2-digit' }).split(',')[0];
 
 export const getFormattedListPrice = (listPrice) =>
   new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
-    maximumSignificantDigits: 3,
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
   }).format(listPrice);
 
 export const getFormattedBaths = (bathsFull, bathsHalf) =>
@@ -79,5 +85,9 @@ export const getFormattedAddress = ({
   state,
 }) => {
   const street = `${streetNumber} ${capitalizeEachWord(streetName)}`;
-  return [street, city, getStateAbbreviation(state)].join(', ');
+  return [
+    street,
+    capitalizeEachWord(city),
+    getStateAbbreviation(capitalizeEachWord(state))
+  ].join(', ');
 };

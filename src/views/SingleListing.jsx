@@ -43,6 +43,7 @@ const SingleListing = ({
           src={isFavorited ? heartFill : heartStroke}
           className="favorite"
           alt="favorite icon"
+          title="set favorite"
           onClick={() => setFavorited(!isFavorited)}
         />
       </div>

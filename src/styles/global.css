@@ -58,6 +58,7 @@ ul.listings {
   top: 13px;
   right: 9px;
   width: 40px;
+  cursor: pointer;
 }
 
 .listings p {
