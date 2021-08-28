@@ -29,3 +29,4 @@ If given more time to work on this, I would probably focus on the following:
 - further separation of logic and presentation; I typically create "container" components that serve as wrappers with all the business logic so that the presentational components remain pure. The application is small enough now that it's not really necessary.
 - CSS library - LESS/SaSS, etc. for better organization of the styles, assuming they grow in length and complexity
 - CI config for tests and linting
+- cross browser testing; this has only been tested in Chrome and Safari on Mac
