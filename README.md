@@ -12,3 +12,7 @@ There were some minor differences in the Figma file that I decided not to make i
 - between listing container and left side of window
 
 Sometimes there differences were only 1-3px, sometimes 20px+. I decided to pick the amount that looked best for each situation and stay consistent. Normally I would ask the designer about these issues.
+
+## Accessibility Issues
+
+When running accessibility checks with axe dev tools, it does flag a "serious" issue with the lack of sufficient color contrast, but that's based on the design, so it would be another issue to bring up with the designer.
